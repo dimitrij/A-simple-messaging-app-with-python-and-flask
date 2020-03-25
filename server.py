@@ -1,3 +1,4 @@
+# By using Flask and Python we create server.
 from flask import Flask, request
 import datetime as dt
 import time
@@ -7,13 +8,14 @@ app = Flask(__name__)
 messages = []
 
 users = {
-    'Nick': '12345'
+    'Dimitrij': 'Dimitrij12345'
 }
 
 @app.route("/")
 def hello():
-    return "This is Dimitrij Chat App using Flask and Python."
+    return "This is Dimitrij Chat App using Flask and Python. dimitrij@aleshkov.com"
 
+# create Json page with information about Messanger name, actual datetime, amout of messages and users.
 @app.route("/status")
 def status():
     return {

@@ -9,6 +9,7 @@ def get_messages():
     data = response.json()
     return data['messages']
 
+# Print Message with customised time
 def print_message(message):
     username = message['username']
     message_time = message['time']
@@ -19,6 +20,7 @@ def print_message(message):
     print(dt.strftime('%d.%m.%Y %H:%M:%S'), username)
     print(text)
     print()
+
 
 while True:
     messages = get_messages()
